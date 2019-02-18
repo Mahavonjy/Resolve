@@ -1,0 +1,19 @@
+#include "my.h"
+
+int main(int argc, char* argv[]) {
+  char c[1000];
+  FILE *file;
+
+  if ((file = fopen(argv[1], "r")) == NULL)
+    {
+      printf("Error! opening file");
+      exit(1);
+    }
+
+  fscanf(file,"%[^\n]", c);
+
+  printf("Data from the file:\n\t%s", c);
+  fclose(file);
+
+  return 0;
+}
