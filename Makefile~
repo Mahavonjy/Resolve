@@ -6,8 +6,9 @@ NAME	= mmc
 RM	= rm -f
 
 SRC	= \
-	read.c
-
+	mmc.c \
+	main.c \
+	my_func.c
 OBJ	= $(SRC:.c=.o)
 
 all:	$(NAME)
