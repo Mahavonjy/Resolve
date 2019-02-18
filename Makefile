@@ -1,19 +1,19 @@
-CC	= gcc
+CC			= gcc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror
 
-NAME	= mmc
-RM	= rm -f
+NAME		= chicken_solver
+RM			= rm -f
 
-SRC	= \
-	read.c
+SRC			= \
+			read.c
 
-OBJ	= $(SRC:.c=.o)
+OBJ			= $(SRC:.c=.o)
 
-all:	$(NAME)
+all:		$(NAME)
 
-$(NAME): $(OBJ)
-	gcc $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): 	$(OBJ)
+	gcc 	$(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) $(OBJ)
@@ -21,7 +21,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: 		fclean all
 
 .PHONY: all $(NAME) clean fclean re
 
